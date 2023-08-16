@@ -1,0 +1,15 @@
+dependencies:
+- name: prometheus
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 19.6.1
+- name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 6.50.8
+- name: dhc-monitoring-netpols
+  repository: ""
+  version: 5.5.0
+- name: i3-alerts
+  repository: ""
+  version: 5.5.0
+digest: sha256:827aacf8a6834b7243882f5db5c887a113bf658be24d6efae52214e0a3d02965
+generated: "2023-07-11T11:53:57.6212171+05:30"

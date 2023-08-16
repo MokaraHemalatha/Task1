@@ -1,0 +1,30 @@
+apiVersion: v2
+name: i3-monitoring-helm
+version: 5.5.0
+appVersion: 5.5.0
+description: i3-monitoring Helm Chart
+home: https://git.daimler.com/i3/i3-monitoring
+keywords:
+  - observabiliy
+  - monitoring
+  - kubernetes
+maintainers:
+  - name: i3
+    email: i3.consulting@mercedes-benz.com
+    url: https://pages.git.daimler.com/i3/welcome/
+icon: https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg
+dependencies:
+  - name: prometheus
+    condition: prometheus.enabled
+    version: "19.6.1"
+    repository: "https://prometheus-community.github.io/helm-charts"
+  - name: grafana
+    condition: grafana.enabled
+    version: "6.50.8"
+    repository: "https://grafana.github.io/helm-charts"
+  - name: dhc-monitoring-netpols
+    condition: dhc-monitoring-netpols.enabled
+    version: 5.5.0
+  - name: i3-alerts
+    condition: i3-alerts.enabled
+    version: 5.5.0
